@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Barlow', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 html {
@@ -12,4 +12,188 @@ html {
 body {
     font-size: $baseFontSize;
     min-width: 100%;
+}
+.profile-container {
+    width: 320px;
+    height: 813px;
+    border-radius: 5px;
+    box-shadow: $boxShadow;
+    background-color: $backgroundColor;
+    margin: 20px auto 0 auto;
+}
+.profile-container__inner {
+    width: 320px;
+    height: 95px;
+    background-color: $primaryColor;
+    border-radius: 5px 5px 0 0;
+}
+.user-container {
+    width: 283px;
+    height: 235px;
+    margin: 0 auto;
+    margin-top: -59px;
+    background-color: $backgroundColor;
+    border-radius: 5px;
+    box-shadow: $boxShadow;
+    display: flex;
+    flex-direction: column;
+    .share-icon {
+        width: 10px;
+        height: 10px;
+        margin: 11.9px 11.9px 0 0;
+        background-color: $secondaryColor;
+        align-self: flex-end;
+    }
+    .avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: -70px auto 0 auto;
+        background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor;
+    }
+}
+.headline {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto 0 auto;
+    position: relative;
+    .name {
+        font-size: 18px;
+        color: $primaryColor;
+        align-self: center;
+        font-weight: 600;
+        color: $primaryColor;
+    }
+    .country {
+        align-self: center;
+        font-size: 12px;
+        color: $lightTextColor;
+    }
+    .heart-icon {
+        width: 12px;
+        height: 10.7px;
+        background-color: hotpink;
+        position: absolute;
+        top: 6px;
+        left: 226px;
+    }
+}
+.social-activity {
+    display: flex;
+    align-self: center;
+    list-style-type: none;
+    width: 90%;
+    margin-top: 35px;
+    .likes, .following, .followers {
+        font-size: 24px;
+        color: $secondaryColor;
+        margin-left: 21px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 30%;
+        text-align: left;
+        span {
+            font-size: 10px;
+            color: $socialActivityTextColor;
+            line-height: 29px;
+            text-align: left;
+        }
+    }
+    .following {
+        position: relative;
+    }
+    .vertical-line {
+        height: 38px;
+        opacity: 0.1;
+        border: 1px solid #979797;
+    }
+}
+.button-follow {
+    background-color: $secondaryColor;
+    color: white;
+    width: 248px;
+    height: 46px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4.2px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin: 21px  auto 17px auto;
+}
+.comments-container {
+    width: 284px;
+    height: 591px;
+    box-shadow: $boxShadow;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    // background-color: $backgroundColor;
+    &:first-child() {
+        margin-top: 40px;
+     }
+   .hide-comments {
+       margin: 25px auto 10px auto;
+       &:link, &:visited, &:hover, &:active {
+        font-size: 14px;
+        color: $secondaryColor;
+       }
+    }
+}
+.comment {
+    display: flex;
+     width: 90%;
+     margin-bottom: 20px;
+     margin-top: 30px;
+     border-bottom: 1px solid #c5c8ce;
+     .comment-date {
+         color: $primaryColor;
+         opacity: 0.5;
+         font-size: 14px;
+         position: absolute;
+         margin-left: 242px;
+     }
+     .comment-avatar {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 11px 0 20px;
+        background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor; 
+    }
+    .comment-body {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: 71px; 
+        padding-bottom: 20px;
+        .comment-author {
+            font-size: 14px;
+            color: $primaryColor;
+            font-weight: 600;
+        }
+        .comment-text {
+            font-size: 14px;
+            color: $darkTextColor;
+            line-height: 21px;  
+        }
+    }
+    
+}
+input {
+    color: $lightTextColor;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
+    border: none;
+    margin-top: 14px;
+    border-bottom: 1px solid #c5c8ce;
 }

@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Barlow', Arial, sans-serif; }
+  font-family: 'Montserrat', Arial, sans-serif; }
 
 html {
   font-size: 10px; }
@@ -12,5 +12,170 @@ html {
 body {
   font-size: 10px;
   min-width: 100%; }
+
+.profile-container {
+  width: 320px;
+  height: 813px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.5);
+  background-color: #fff;
+  margin: 20px auto 0 auto; }
+
+.profile-container__inner {
+  width: 320px;
+  height: 95px;
+  background-color: #002c71;
+  border-radius: 5px 5px 0 0; }
+
+.user-container {
+  width: 283px;
+  height: 235px;
+  margin: 0 auto;
+  margin-top: -59px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.5);
+  display: flex;
+  flex-direction: column; }
+  .user-container .share-icon {
+    width: 10px;
+    height: 10px;
+    margin: 11.9px 11.9px 0 0;
+    background-color: #ffa640;
+    align-self: flex-end; }
+  .user-container .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: -70px auto 0 auto;
+    background: url("/images/user_avatar.jpg") center center/cover no-repeat #002c71; }
+
+.headline {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 16px auto 0 auto;
+  position: relative; }
+  .headline .name {
+    font-size: 18px;
+    color: #002c71;
+    align-self: center;
+    font-weight: 600;
+    color: #002c71; }
+  .headline .country {
+    align-self: center;
+    font-size: 12px;
+    color: #8298b9; }
+  .headline .heart-icon {
+    width: 12px;
+    height: 10.7px;
+    background-color: hotpink;
+    position: absolute;
+    top: 6px;
+    left: 226px; }
+
+.social-activity {
+  display: flex;
+  align-self: center;
+  list-style-type: none;
+  width: 90%;
+  margin-top: 35px; }
+  .social-activity .likes, .social-activity .following, .social-activity .followers {
+    font-size: 24px;
+    color: #ffa640;
+    margin-left: 21px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    text-align: left; }
+    .social-activity .likes span, .social-activity .following span, .social-activity .followers span {
+      font-size: 10px;
+      color: #343e00;
+      line-height: 29px;
+      text-align: left; }
+  .social-activity .following {
+    position: relative; }
+  .social-activity .vertical-line {
+    height: 38px;
+    opacity: 0.1;
+    border: 1px solid #979797; }
+
+.button-follow {
+  background-color: #ffa640;
+  color: white;
+  width: 248px;
+  height: 46px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4.2px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  margin: 21px  auto 17px auto; }
+
+.comments-container {
+  width: 284px;
+  height: 591px;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.5);
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px; }
+  .comments-container:first-child() {
+    margin-top: 40px; }
+  .comments-container .hide-comments {
+    margin: 25px auto 10px auto; }
+    .comments-container .hide-comments:link, .comments-container .hide-comments:visited, .comments-container .hide-comments:hover, .comments-container .hide-comments:active {
+      font-size: 14px;
+      color: #ffa640; }
+
+.comment {
+  display: flex;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  border-bottom: 1px solid #c5c8ce; }
+  .comment .comment-date {
+    color: #002c71;
+    opacity: 0.5;
+    font-size: 14px;
+    position: absolute;
+    margin-left: 242px; }
+  .comment .comment-avatar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 11px 0 20px;
+    background: url("/images/user_avatar.jpg") center center/cover no-repeat #002c71; }
+  .comment .comment-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 71px;
+    padding-bottom: 20px; }
+    .comment .comment-body .comment-author {
+      font-size: 14px;
+      color: #002c71;
+      font-weight: 600; }
+    .comment .comment-body .comment-text {
+      font-size: 14px;
+      color: #444444;
+      line-height: 21px; }
+
+input {
+  color: #8298b9;
+  font-size: 18px;
+  width: 70%;
+  margin: 0 auto;
+  border: none;
+  margin-top: 14px;
+  border-bottom: 1px solid #c5c8ce; }
 
 /*# sourceMappingURL=main.css.map*/
