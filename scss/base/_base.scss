@@ -13,6 +13,7 @@ body {
     font-size: $baseFontSize;
     min-width: 100%;
 }
+
 .profile-container {
     width: 320px;
     height: 813px;
@@ -21,12 +22,14 @@ body {
     background-color: $backgroundColor;
     margin: 20px auto 0 auto;
 }
+
 .profile-container__inner {
     width: 320px;
     height: 95px;
     background-color: $primaryColor;
     border-radius: 5px 5px 0 0;
 }
+
 .user-container {
     width: 283px;
     height: 235px;
@@ -52,6 +55,7 @@ body {
         background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor;
     }
 }
+
 .headline {
     margin: 0 auto;
     display: flex;
@@ -81,13 +85,16 @@ body {
         left: 226px;
     }
 }
+
 .social-activity {
     display: flex;
     align-self: center;
     list-style-type: none;
     width: 90%;
     margin-top: 35px;
-    .likes, .following, .followers {
+    .likes,
+    .following,
+    .followers {
         font-size: 24px;
         color: $secondaryColor;
         margin-left: 21px;
@@ -112,6 +119,7 @@ body {
         border: 1px solid #979797;
     }
 }
+
 .button-follow {
     background-color: $secondaryColor;
     color: white;
@@ -125,8 +133,9 @@ body {
     font-weight: 600;
     border: none;
     outline: none;
-    margin: 21px  auto 17px auto;
+    margin: 21px auto 17px auto;
 }
+
 .comments-container {
     width: 284px;
     height: 591px;
@@ -135,45 +144,48 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-    // background-color: $backgroundColor;
+    margin-top: 15px; // background-color: $backgroundColor;
     &:first-child() {
         margin-top: 40px;
-     }
-   .hide-comments {
-       margin: 25px auto 10px auto;
-       &:link, &:visited, &:hover, &:active {
-        font-size: 14px;
-        color: $secondaryColor;
-       }
+    }
+    .hide-comments {
+        margin: 25px auto 10px auto;
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            font-size: 14px;
+            color: $secondaryColor;
+        }
     }
 }
+
 .comment {
     display: flex;
-     width: 90%;
-     margin-bottom: 20px;
-     margin-top: 30px;
-     border-bottom: 1px solid #c5c8ce;
-     .comment-date {
-         color: $primaryColor;
-         opacity: 0.5;
-         font-size: 14px;
-         position: absolute;
-         margin-left: 242px;
-     }
-     .comment-avatar {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-bottom: 1px solid #c5c8ce;
+    .comment-date {
+        color: $primaryColor;
+        opacity: 0.5;
+        font-size: 14px;
+        position: absolute;
+        margin-left: 242px;
+    }
+    .comment-avatar {
         position: absolute;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         margin: 0 11px 0 20px;
-        background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor; 
+        background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor;
     }
     .comment-body {
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-left: 71px; 
+        margin-left: 71px;
         padding-bottom: 20px;
         .comment-author {
             font-size: 14px;
@@ -183,11 +195,11 @@ body {
         .comment-text {
             font-size: 14px;
             color: $darkTextColor;
-            line-height: 21px;  
+            line-height: 21px;
         }
     }
-    
 }
+
 input {
     color: $lightTextColor;
     font-size: 18px;

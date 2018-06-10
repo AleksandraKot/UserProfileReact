@@ -1,14 +1,14 @@
-{
-    "user-profile": [
-        {
-            "name": "Harvey Specter",
-            "address": "New York, USA",
-            "likes": 121,
-            "followers": 723,
-            "following": 4433 
-        }
-    ],
-    "comments" : [
+module.exports = {
+  "userProfile":
+    {
+      "name": "Harvey Specter",
+      "address": "New York, USA",
+      "likes": 121,
+      "followers": 723,
+      "following": 4433
+    }
+  ,
+  "comments": [
     {
       "index": 0,
       "date": "Fri Jun 08 2018 18:43:07 GMT+0200 (Central European Summer Time)",

@@ -82,7 +82,9 @@ body {
   list-style-type: none;
   width: 90%;
   margin-top: 35px; }
-  .social-activity .likes, .social-activity .following, .social-activity .followers {
+  .social-activity .likes,
+  .social-activity .following,
+  .social-activity .followers {
     font-size: 24px;
     color: #ffa640;
     margin-left: 21px;
@@ -91,7 +93,9 @@ body {
     align-content: center;
     width: 30%;
     text-align: left; }
-    .social-activity .likes span, .social-activity .following span, .social-activity .followers span {
+    .social-activity .likes span,
+    .social-activity .following span,
+    .social-activity .followers span {
       font-size: 10px;
       color: #343e00;
       line-height: 29px;
@@ -116,7 +120,7 @@ body {
   font-weight: 600;
   border: none;
   outline: none;
-  margin: 21px  auto 17px auto; }
+  margin: 21px auto 17px auto; }
 
 .comments-container {
   width: 284px;
