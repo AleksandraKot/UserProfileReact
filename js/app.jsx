@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserProfile from './UserProfile.jsx';
+import UserProfileWrapper from './UserProfileWrapper.jsx';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <UserProfile />
+        <UserProfileWrapper />
       </div>
   )
   }
