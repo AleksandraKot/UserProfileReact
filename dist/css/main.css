@@ -41,7 +41,7 @@ body {
     width: 10px;
     height: 10px;
     margin: 11.9px 11.9px 0 0;
-    background-color: #ffa640;
+    color: #ffa640;
     align-self: flex-end; }
   .user-container .avatar {
     width: 70px;
@@ -71,7 +71,7 @@ body {
   .headline .heart-icon {
     width: 12px;
     height: 10.7px;
-    background-color: hotpink;
+    color: lightgrey;
     position: absolute;
     top: 6px;
     left: 226px; }

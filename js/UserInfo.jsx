@@ -20,12 +20,12 @@ class UserInfo extends React.Component {
     render() {
         return (
             <section className="user-container">
-                <div className="share-icon"></div>
+                <div className="share-icon fa fa-share-square"></div>
                 <div className="avatar"></div>
                 <div className="headline">
                     <span className="name">{initialData.userProfile.name}</span>
                     <span className="country">{initialData.userProfile.address}</span>
-                    <div className="heart-icon" onClick={this.handleLikesAdd}></div>
+                    <span className="heart-icon far fa-heart" onClick={this.handleLikesAdd}></span>
                 </div>
                 <ul className="social-activity">
                     <li className="likes">{this.state.nbOfLikes}<span>Likes</span></li>
