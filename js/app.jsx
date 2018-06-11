@@ -8,13 +8,13 @@ class App extends React.Component {
       <div>
         <UserProfileWrapper />
       </div>
-  )
+    )
   }
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('app'));
 });
