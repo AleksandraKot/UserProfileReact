@@ -46,7 +46,7 @@ class AllComments extends React.Component {
         return (
             <section className="comments-container">
                 <a href="#" className="hide-comments">Hide comments(353)</a>
-                <Scrollbars autoHeight>
+                <Scrollbars style={{maxHeight: 900}}>
                     {comments}
                 </Scrollbars>
                 <section className="add-comment">

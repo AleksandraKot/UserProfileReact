@@ -182,6 +182,10 @@ body {
   margin-top: 15px; }
   .comments-container:first-child() {
     margin-top: 40px; }
+  .comments-container div {
+    max-height: 500px; }
+    .comments-container div:first-child() {
+      max-height: 500px; }
   .comments-container .hide-comments {
     margin: 25px auto 10px auto; }
     .comments-container .hide-comments:link, .comments-container .hide-comments:visited, .comments-container .hide-comments:hover, .comments-container .hide-comments:active {
