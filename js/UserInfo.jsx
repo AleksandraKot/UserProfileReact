@@ -34,9 +34,9 @@ class UserInfo extends React.Component {
                     <ul className="social-activity">
                         <li className="likes">{this.state.nbOfLikes}<span>Likes</span></li>
                         <div className="vertical-line"></div>
-                        <li className="following">{this.state.nbOfFollowers}<span>Following</span></li>
+                        <li className="following">{initialData.userProfile.following}<span>Following</span></li>
                         <div className="vertical-line"></div>
-                        <li className="followers">{initialData.userProfile.following}<span>Followers</span></li>
+                        <li className="followers">{this.state.nbOfFollowers}<span>Followers</span></li>
                     </ul>
                     <button className="button-follow" onClick={this.handleFollowersAdd}>follow</button>
                 </div>

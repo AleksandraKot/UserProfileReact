@@ -4,8 +4,8 @@ module.exports = {
       "name": "Harvey Specter",
       "address": "New York, USA",
       "likes": 121,
-      "followers": 723,
-      "following": 4433
+      "followers": 4433,
+      "following": 723
     }
   ,
   "comments": [
