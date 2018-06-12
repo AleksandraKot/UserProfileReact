@@ -38,7 +38,6 @@ body {
 }
 
 .user-container {
-    // min-width: 283px;
     width: 90%;
     height: 235px;
     margin: 0 auto;
@@ -57,6 +56,7 @@ body {
         cursor: pointer;
     }
 }
+
 .avatar-headline-wrapper {
     display: flex;
     flex-direction: column;
@@ -87,7 +87,6 @@ body {
             width: auto;
             margin-left: 18px;
         }
-     
         .name {
             font-size: 18px;
             color: $primaryColor;
@@ -114,25 +113,25 @@ body {
             cursor: pointer;
         }
     }
- }
-
+}
 
 .social-button-wrapper {
     display: flex;
     flex-direction: column;
     margin-top: 35px;
     @include breakpoint (tablet) {
-        margin-top: 19px auto 0 22px;;
+        margin-top: 19px auto 0 22px;
+        ;
         flex-direction: row;
         align-items: center;
     }
- }
+}
+
 .social-activity {
     display: flex;
     align-self: center;
     list-style-type: none;
     width: 90%;
-
     .likes,
     .following,
     .followers {
@@ -186,7 +185,7 @@ body {
         background-color: darken($secondaryColor, 10%);
     }
     &:active {
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -200,7 +199,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    
     &:first-child() {
         margin-top: 40px;
     }
@@ -261,6 +259,7 @@ body {
         }
     }
 }
+
 .add-comment {
     height: 10vh;
     display: flex;
@@ -276,7 +275,6 @@ body {
         &:focus {
             outline: none;
         }
- @include  placeholder-color($lightTextColor);
+        @include placeholder-color($lightTextColor);
     }
 }
-

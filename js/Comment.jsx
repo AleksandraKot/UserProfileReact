@@ -9,7 +9,7 @@ class Comment extends React.Component {
             <section className="comment">
                 <Moment element="span" fromNow ago className="comment-date">{this.props.date}</Moment>
                 <div className="comment-avatar"></div>
-                <div className="comment-body"> 
+                <div className="comment-body">
                     <span className="comment-author">{this.props.name}</span>
                     <p className="comment-text">{this.props.comment}</p>
                 </div>

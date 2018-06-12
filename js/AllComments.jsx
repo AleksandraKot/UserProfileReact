@@ -41,7 +41,7 @@ class AllComments extends React.Component {
         var yesterday = moment(new Date()).add(-1, 'days');
         let comments = this.state.comments.map((el, index) => {
             return (
-                <Comment key={index} name={el.name}  date={index<3?yesterday:this.props.date} comment={el.comment} />
+                <Comment key={index} name={el.name} date={index < 3 ? yesterday : this.props.date} comment={el.comment} />
             )
         });
         return (
