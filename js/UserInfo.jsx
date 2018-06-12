@@ -16,11 +16,14 @@ class UserInfo extends React.Component {
     handleLikesAdd = () => {
         this.setState({ nbOfLikes: ++this.state.nbOfLikes })
     }
+    handleUrlShow = () => {
+        prompt("Adres url profilu użytkownika Harvey Specter to: ", window.location.href);
+    }
 
     render() {
         return (
             <section className="user-container">
-                <div className="share-icon fa fa-share-square"></div>
+                <div className="share-icon fa fa-share-square" onClick={this.handleUrlShow}></div>
                 <div className="avatar-headline-wrapper">
                     <div className="avatar"></div>
                     <div className="headline">

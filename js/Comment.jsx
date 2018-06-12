@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import initialData from '../initial_data';
-
 
 class Comment extends React.Component {
     render() {
