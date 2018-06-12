@@ -165,6 +165,10 @@ body {
       width: 25%;
       min-width: 134px;
       margin: 0 22px 0 35px; } }
+  .button-follow:hover {
+    background-color: #ff8e0d; }
+  .button-follow:active {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
 
 .comments-container {
   width: 90%;

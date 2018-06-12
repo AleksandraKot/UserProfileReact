@@ -182,6 +182,12 @@ body {
         min-width: 134px;
         margin: 0 22px 0 35px;
     }
+    &:hover {
+        background-color: darken($secondaryColor, 10%);
+    }
+    &:active {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    }
 }
 
 .comments-container {
