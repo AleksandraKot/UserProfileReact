@@ -1,6 +1,6 @@
 import React from 'react';
 
-import initialData from '../initial_data';
+// import initialData from '../initial_data';
 
 
 class Comment extends React.Component {
@@ -10,8 +10,10 @@ class Comment extends React.Component {
                 <span className="comment-date">1d</span>
                 <div className="comment-avatar"></div>
                 <div className="comment-body">
-                    <span className="comment-author">{initialData.comments[0].name}</span>
-                    <p className="comment-text">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellestesque dui, non felis. Maecenas malesuada ulticies. Curabitur et ligula.</p>
+                    {/* <span className="comment-author">{initialData.comments[0].name}</span> */}
+                    <span className="comment-author">{this.props.name}</span>
+                    {/* <p className="comment-text">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellestesque dui, non felis. Maecenas malesuada ulticies. Curabitur et ligula.</p> */}
+                    <p className="comment-text">{this.props.comment}</p>
                 </div>
             </section>
         )

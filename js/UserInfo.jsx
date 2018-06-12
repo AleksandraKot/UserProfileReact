@@ -11,30 +11,35 @@ class UserInfo extends React.Component {
         }
     }
     handleFollowersAdd = () => {
-        this.setState({nbOfFollowers: ++this.state.nbOfFollowers})
+        this.setState({ nbOfFollowers: ++this.state.nbOfFollowers })
     }
     handleLikesAdd = () => {
-        this.setState({nbOfLikes: ++this.state.nbOfLikes})
+        this.setState({ nbOfLikes: ++this.state.nbOfLikes })
     }
 
     render() {
         return (
             <section className="user-container">
                 <div className="share-icon fa fa-share-square"></div>
-                <div className="avatar"></div>
-                <div className="headline">
-                    <span className="name">{initialData.userProfile.name}</span>
-                    <span className="country">{initialData.userProfile.address}</span>
-                    <span className="heart-icon far fa-heart" onClick={this.handleLikesAdd}></span>
+                <div className="avatar-headline-wrapper">
+                    <div className="avatar"></div>
+                    <div className="headline">
+                        <span className="name">{initialData.userProfile.name}
+                            <span className="heart-icon far fa-heart" onClick={this.handleLikesAdd}></span>
+                        </span>
+                        <span className="country">{initialData.userProfile.address}</span>
+                    </div>
                 </div>
-                <ul className="social-activity">
-                    <li className="likes">{this.state.nbOfLikes}<span>Likes</span></li>
-                    <div className="vertical-line"></div>
-                    <li className="following">{this.state.nbOfFollowers}<span>Following</span></li>
-                    <div className="vertical-line"></div>
-                    <li className="followers">{initialData.userProfile.following}<span>Followers</span></li>
-                </ul>
-                <button className="button-follow" onClick={this.handleFollowersAdd}>follow</button>
+                <div className="social-button-wrapper">
+                    <ul className="social-activity">
+                        <li className="likes">{this.state.nbOfLikes}<span>Likes</span></li>
+                        <div className="vertical-line"></div>
+                        <li className="following">{this.state.nbOfFollowers}<span>Following</span></li>
+                        <div className="vertical-line"></div>
+                        <li className="followers">{initialData.userProfile.following}<span>Followers</span></li>
+                    </ul>
+                    <button className="button-follow" onClick={this.handleFollowersAdd}>follow</button>
+                </div>
             </section>
         )
     }

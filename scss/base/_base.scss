@@ -15,23 +15,33 @@ body {
 }
 
 .profile-container {
-    width: 320px;
-    height: 813px;
+    min-width: 320px;
+    max-height: 813px;
+    width: 80%;
+    height: 84vh;
     border-radius: 5px;
     box-shadow: $boxShadow;
-    background-color: $backgroundColor;
-    margin: 20px auto 0 auto;
+    // background-color: $backgroundColor;
+    margin: 10px auto;
+    @include breakpoint (tablet) {
+        max-width: 500px;
+    }
 }
 
 .profile-container__inner {
-    width: 320px;
+    width: 100%;
+    // max-width: 320px;
     height: 95px;
     background-color: $primaryColor;
     border-radius: 5px 5px 0 0;
+    @include breakpoint (tablet) {
+        max-width: 100%;
+    }
 }
 
 .user-container {
-    width: 283px;
+    // min-width: 283px;
+    width: 90%;
     height: 235px;
     margin: 0 auto;
     margin-top: -59px;
@@ -47,51 +57,82 @@ body {
         color: $secondaryColor;
         align-self: flex-end;
     }
+}
+.avatar-headline-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint (tablet) {
+        flex-direction: row;
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 20px;
+    }
     .avatar {
         width: 70px;
         height: 70px;
         border-radius: 50%;
         margin: -70px auto 0 auto;
         background: url("/images/user_avatar.jpg") center center/cover no-repeat $primaryColor;
+        @include breakpoint (tablet) {
+            margin: 0;
+        }
     }
-}
+    .headline {
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto 0 auto;
+        @include breakpoint (tablet) {
+            width: auto;
+            margin-left: 18px;
+        }
+     
+        .name {
+            font-size: 18px;
+            color: $primaryColor;
+            align-self: center;
+            font-weight: 600;
+            color: $primaryColor;
+            position: relative;
+        }
+        .country {
+            align-self: center;
+            font-size: 12px;
+            color: $lightTextColor;
+            @include breakpoint (tablet) {
+                align-self: flex-start;
+            }
+        }
+        .heart-icon {
+            width: 12px;
+            height: 10.7px;
+            color: lightgrey;
+            position: absolute;
+            top: 3px;
+            left: 160px;
+        }
+    }
+ }
 
-.headline {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
+
+.social-button-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 16px auto 0 auto;
-    position: relative;
-    .name {
-        font-size: 18px;
-        color: $primaryColor;
-        align-self: center;
-        font-weight: 600;
-        color: $primaryColor;
+    margin-top: 35px;
+    @include breakpoint (tablet) {
+        margin-top: 19px auto 0 22px;;
+        flex-direction: row;
+        align-items: center;
     }
-    .country {
-        align-self: center;
-        font-size: 12px;
-        color: $lightTextColor;
-    }
-    .heart-icon {
-        width: 12px;
-        height: 10.7px;
-        color: lightgrey;
-        position: absolute;
-        top: 6px;
-        left: 226px;
-    }
-}
-
+ }
 .social-activity {
     display: flex;
     align-self: center;
     list-style-type: none;
     width: 90%;
-    margin-top: 35px;
+
     .likes,
     .following,
     .followers {
@@ -123,7 +164,8 @@ body {
 .button-follow {
     background-color: $secondaryColor;
     color: white;
-    width: 248px;
+    width: 90%;
+    max-width: 248px;
     height: 46px;
     border-radius: 100px;
     text-align: center;
@@ -134,17 +176,25 @@ body {
     border: none;
     outline: none;
     margin: 21px auto 17px auto;
+    @include breakpoint (tablet) {
+        width: 25%;
+        min-width: 134px;
+        margin: 0 22px 0 35px;
+    }
 }
 
 .comments-container {
-    width: 284px;
-    height: 591px;
+    width: 90%;
+    min-width: 284px;
+    // min-height: 591px;
+    height: 50vh;
     box-shadow: $boxShadow;
     margin: 0 auto;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin-top: 15px; // background-color: $backgroundColor;
+    overflow: hidden;
     &:first-child() {
         margin-top: 40px;
     }
@@ -156,6 +206,9 @@ body {
         &:active {
             font-size: 14px;
             color: $secondaryColor;
+            @include breakpoint (tablet) {
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -199,13 +252,19 @@ body {
         }
     }
 }
-
-input {
-    color: $lightTextColor;
-    font-size: 18px;
-    width: 70%;
-    margin: 0 auto;
-    border: none;
-    margin-top: 14px;
-    border-bottom: 1px solid #c5c8ce;
+.add-comment {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    input {
+        color: $lightTextColor;
+        font-size: 18px;
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #c5c8ce;
+    }
 }
+
