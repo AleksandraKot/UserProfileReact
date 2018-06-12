@@ -24,6 +24,7 @@ body {
     margin: 10px auto;
     @include breakpoint (tablet) {
         max-width: 500px;
+        max-height: 700px;
     }
 }
 
