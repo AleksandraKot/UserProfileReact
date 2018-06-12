@@ -21,7 +21,6 @@ body {
     height: 84vh;
     border-radius: 5px;
     box-shadow: $boxShadow;
-    // background-color: $backgroundColor;
     margin: 10px auto;
     @include breakpoint (tablet) {
         max-width: 500px;
@@ -30,7 +29,6 @@ body {
 
 .profile-container__inner {
     width: 100%;
-    // max-width: 320px;
     height: 95px;
     background-color: $primaryColor;
     border-radius: 5px 5px 0 0;
@@ -193,7 +191,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-top: 15px; // background-color: $backgroundColor;
+    margin-top: 15px;
     overflow: hidden;
     &:first-child() {
         margin-top: 40px;
@@ -258,13 +256,17 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     input {
-        color: $lightTextColor;
+
         font-size: 18px;
         width: 90%;
         margin-left: 20px;
         margin-bottom: 10px;
         border: none;
         border-bottom: 1px solid #c5c8ce;
+        &:focus {
+            outline: none;
+        }
+ @include  placeholder-color($lightTextColor);
     }
 }
 

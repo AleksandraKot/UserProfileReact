@@ -19,8 +19,8 @@ class AllComments extends React.Component {
                     {comments}
                 </Scrollbars>
                 <section className="add-comment">
-               <input className="w3-input w3-animate-input" type="text" value="Add a comment"></input>
-           </section>
+                    <input type="text" placeholder="Add a comment"></input>
+                </section>
             </section>
 
         )

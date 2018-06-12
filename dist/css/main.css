@@ -225,12 +225,25 @@ body {
   flex-direction: column;
   justify-content: flex-end; }
   .add-comment input {
-    color: #8298b9;
     font-size: 18px;
     width: 90%;
     margin-left: 20px;
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid #c5c8ce; }
+    .add-comment input:focus {
+      outline: none; }
+    .add-comment input::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #8298b9; }
+    .add-comment input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #8298b9; }
+    .add-comment input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #8298b9; }
+    .add-comment input:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #8298b9; }
 
 /*# sourceMappingURL=main.css.map*/
