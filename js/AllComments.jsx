@@ -30,8 +30,7 @@ class AllComments extends React.Component {
                 "name": "Mike Ross",
                 "comment": this.state.value,
             }
-            console.log(this.state.date);
-            console.log(this.state.comments, "array comments");
+            
             (this.state.comments).push(newComment);
             this.setState({ value: '' });
         }
