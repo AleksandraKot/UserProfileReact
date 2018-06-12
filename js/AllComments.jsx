@@ -21,7 +21,7 @@ class AllComments extends React.Component {
     handleChangeInuput = (e) => {
         e.preventDefault();
         this.setState({ value: e.target.value });
-    }
+    };
     handleAddComment = (e) => {
         e.preventDefault();
         if (e.key === 'Enter') {
@@ -29,19 +29,19 @@ class AllComments extends React.Component {
                 "date": this.state.date,
                 "name": "Mike Ross",
                 "comment": this.state.value,
-            }
-            
+            };
+
             (this.state.comments).push(newComment);
             this.setState({ value: '' });
         }
-    }
+    };
 
     render() {
         var yesterday = moment(new Date()).add(-1, 'days');
         let comments = this.state.comments.map((el, index) => {
             return (
                 <Comment key={index} name={el.name} date={index < 3 ? yesterday : this.props.date} comment={el.comment} />
-            )
+            );
         });
         return (
             <section className="comments-container">
@@ -53,7 +53,7 @@ class AllComments extends React.Component {
                     <input value={this.state.value} type="text" placeholder="Add a comment" onChange={this.handleChangeInuput} onKeyUp={this.handleAddComment}></input>
                 </section>
             </section>
-        )
+        );
     }
 }
 module.exports = AllComments;
