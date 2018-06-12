@@ -15,17 +15,19 @@ class AllComments extends React.Component {
         }
         this.handleAddComment = this.handleAddComment.bind(this);
     }
-    handleAddComment(e) {
-        this.setState({ value: e.target.value });
+    handleAddComment = (e) => {
+        // if (e.key === 'Enter') {
+            this.setState({ value: e.target.value });
 
-        var newComment = {
-            "date": "1d",
-            "name": "Mike Ross",
-            "comment": this.state.value,
-        }
-        console.log(this.state.comments, "array comments");
-        (this.state.comments).push(newComment);
-
+            var newComment = {
+                "date": "1d",
+                "name": "Mike Ross",
+                "comment": this.state.value,
+            }
+            console.log(this.state.comments, "array comments");
+            (this.state.comments).push(newComment);
+        //     e.preventDefault();
+        // }
     }
 
     render() {
