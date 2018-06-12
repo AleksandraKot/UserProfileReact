@@ -187,7 +187,6 @@ body {
 .comments-container {
     width: 90%;
     min-width: 284px;
-    // min-height: 591px;
     height: 50vh;
     box-shadow: $boxShadow;
     margin: 0 auto;
@@ -195,7 +194,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    overflow: hidden;
+    
     &:first-child() {
         margin-top: 40px;
     }
@@ -225,7 +224,8 @@ body {
         opacity: 0.5;
         font-size: 14px;
         position: absolute;
-        margin-left: 242px;
+        margin-left: 78%;
+        margin-right: 5px;
     }
     .comment-avatar {
         position: absolute;
@@ -250,6 +250,8 @@ body {
             font-size: 14px;
             color: $darkTextColor;
             line-height: 21px;
+            max-width: 80%;
+            overflow-x: hidden !important;
         }
     }
 }
@@ -259,7 +261,6 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     input {
-
         font-size: 18px;
         width: 90%;
         margin-left: 20px;

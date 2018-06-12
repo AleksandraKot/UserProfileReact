@@ -3,7 +3,9 @@ import React from 'react';
 import Comment from './Comment.jsx';
 import initialData from '../initial_data';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Moment from 'react-moment';
 
+var moment = require('moment');
 
 class AllComments extends React.Component {
     constructor(props) {
@@ -11,7 +13,8 @@ class AllComments extends React.Component {
         this.state = {
             comments: initialData.comments,
             singleComment: initialData.comments.comment,
-            value: ''
+            value: '',
+            date: moment().fromNow()
         }
         this.handleAddComment = this.handleAddComment.bind(this);
     }
@@ -23,10 +26,11 @@ class AllComments extends React.Component {
         e.preventDefault();
         if (e.key === 'Enter') {
             var newComment = {
-                "date": "1d",
+                "date": this.state.date,
                 "name": "Mike Ross",
                 "comment": this.state.value,
             }
+            console.log(this.state.date);
             console.log(this.state.comments, "array comments");
             (this.state.comments).push(newComment);
             this.setState({ value: '' });
@@ -34,9 +38,10 @@ class AllComments extends React.Component {
     }
 
     render() {
+        var yesterday = moment(new Date()).add(-1, 'days');
         let comments = this.state.comments.map((el, index) => {
             return (
-                <Comment key={index} name={el.name} comment={el.comment} />
+                <Comment key={index} name={el.name}  date={index<3?yesterday:this.props.date} comment={el.comment} />
             )
         });
         return (
