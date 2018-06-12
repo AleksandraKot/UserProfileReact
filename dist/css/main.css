@@ -66,7 +66,7 @@ body {
     height: 70px;
     border-radius: 50%;
     margin: -70px auto 0 auto;
-    background: url("../images/user_avatar.jpg") center center/cover no-repeat #002c71; }
+    background: url("/images/user_avatar.jpg") center center/cover no-repeat #002c71; }
     @media (min-width: 500px) {
       .avatar-headline-wrapper .avatar {
         margin: 0; } }
@@ -210,7 +210,7 @@ body {
     height: 40px;
     border-radius: 50%;
     margin: 0 11px 0 20px;
-    background: url("../images/user_avatar.jpg") center center/cover no-repeat #002c71; }
+    background: url("/images/user_avatar.jpg") center center/cover no-repeat #002c71; }
   .comment .comment-body {
     display: flex;
     flex-direction: column;
