@@ -54,6 +54,7 @@ body {
         margin: 11.9px 11.9px 0 0;
         color: $secondaryColor;
         align-self: flex-end;
+        cursor: pointer;
     }
 }
 .avatar-headline-wrapper {
@@ -110,6 +111,7 @@ body {
             position: absolute;
             top: 3px;
             left: 160px;
+            cursor: pointer;
         }
     }
  }
@@ -174,6 +176,7 @@ body {
     border: none;
     outline: none;
     margin: 21px auto 17px auto;
+    cursor: pointer;
     @include breakpoint (tablet) {
         width: 25%;
         min-width: 134px;

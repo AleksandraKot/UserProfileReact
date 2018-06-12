@@ -15,10 +15,13 @@ class AllComments extends React.Component {
         }
         this.handleAddComment = this.handleAddComment.bind(this);
     }
+    handleChangeInuput = (e) => {
+        e.preventDefault();
+        this.setState({ value: e.target.value });
+    }
     handleAddComment = (e) => {
-        // if (e.key === 'Enter') {
-            this.setState({ value: e.target.value });
-
+        e.preventDefault();
+        if (e.key === 'Enter') {
             var newComment = {
                 "date": "1d",
                 "name": "Mike Ross",
@@ -26,12 +29,12 @@ class AllComments extends React.Component {
             }
             console.log(this.state.comments, "array comments");
             (this.state.comments).push(newComment);
-        //     e.preventDefault();
-        // }
+            this.setState({ value: '' });
+        }
     }
 
     render() {
-        let comments = initialData.comments.map((el, index) => {
+        let comments = this.state.comments.map((el, index) => {
             return (
                 <Comment key={index} name={el.name} comment={el.comment} />
             )
@@ -43,7 +46,7 @@ class AllComments extends React.Component {
                     {comments}
                 </Scrollbars>
                 <section className="add-comment">
-                    <input value={this.state.value} type="text" placeholder="Add a comment" onChange={this.handleAddComment}></input>
+                    <input value={this.state.value} type="text" placeholder="Add a comment" onChange={this.handleChangeInuput} onKeyUp={this.handleAddComment}></input>
                 </section>
             </section>
         )

@@ -49,7 +49,8 @@ body {
     height: 10px;
     margin: 11.9px 11.9px 0 0;
     color: #ffa640;
-    align-self: flex-end; }
+    align-self: flex-end;
+    cursor: pointer; }
 
 .avatar-headline-wrapper {
   display: flex;
@@ -100,7 +101,8 @@ body {
       color: lightgrey;
       position: absolute;
       top: 3px;
-      left: 160px; }
+      left: 160px;
+      cursor: pointer; }
 
 .social-button-wrapper {
   display: flex;
@@ -156,7 +158,8 @@ body {
   font-weight: 600;
   border: none;
   outline: none;
-  margin: 21px auto 17px auto; }
+  margin: 21px auto 17px auto;
+  cursor: pointer; }
   @media (min-width: 500px) {
     .button-follow {
       width: 25%;
